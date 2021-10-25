@@ -1,20 +1,12 @@
 # pytailserver
 A tail server demo using websockets and implemented by python  
 
-#### Install requirements  
 ```bash
-pip install -r requirements.txt
+pip install websockets  
+python tailserver.py  
 ```
 
-#### Start tail server  
-```bash
-python tailserver.py
+If you run tailserver on remote server, do not forget to change then ip in  
+```js
+const socket = new WebSocket('ws://localhost:8081/?log=%s');
 ```
-
-#### Start http server  
-```bash
-python web.py
-```
-
-Visit http://localhost:8080  
-echo Hello >> access.log  
